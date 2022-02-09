@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DiceRoller</string>
+    <string name="roll_value">Roll</string>
+    <string name="contar_value">Sumar Uno</string>
+</resources>
