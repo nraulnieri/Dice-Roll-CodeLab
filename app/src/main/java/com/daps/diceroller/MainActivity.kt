@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+    lateinit var diceImage : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         rollButton.setOnClickListener { rollDice() }
         //bt_contar.setOnClickListener { sumarUno() }
+
+        diceImage = findViewById(R.id.dice_image)
     }
 
     //Sumar Uno incrementa el numero en 1, si es texto es igual 1, si es 6 se mantiene igual.
@@ -37,8 +40,6 @@ class MainActivity : AppCompatActivity() {
     //Rodar un dado, genera valores aleatorios entre 1 y 6
     private fun rollDice(){
         val randomInt = (1..6).random()
-        val diceImage:ImageView = findViewById(R.id.dice_image)
-
         val drawableResource = when (randomInt) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
